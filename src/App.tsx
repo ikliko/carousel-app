@@ -27,7 +27,7 @@ function App() {
         <div className="App bg-gray-800 h-screen w-full">
             <header className="bg-gray-800 w-full">
                 <img src={logo} className="w-24 aspect-square animate-spin" alt="logo"/>
-                <InfiniteCarousel images={images} height='h-96' imageFit='COVER'/>
+                <InfiniteCarousel images={images} height='h-128' imageFitType='COVER'/>
             </header>
         </div>
     )

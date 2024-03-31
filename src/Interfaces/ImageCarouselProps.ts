@@ -4,7 +4,7 @@ interface ImageCarouselProps {
     images: string[]
     height?: string
     width?: string
-    imageFit?: ImageFitTypes
+    imageFitType?: ImageFitTypes
     customClass?: string
 }
 

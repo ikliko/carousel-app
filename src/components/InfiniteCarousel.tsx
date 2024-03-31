@@ -8,7 +8,7 @@ const InfiniteCarousel: React.FC<ImageCarouselProps> = ({
                                                             images,
                                                             height = 'h-full',
                                                             width = 'w-full',
-                                                            imageFit = 'DEFAULT',
+                                                            imageFitType = 'DEFAULT',
                                                             customClass = ''
                                                         }) => {
     const carouselRef = useRef<HTMLDivElement>(null)
@@ -136,7 +136,7 @@ const InfiniteCarousel: React.FC<ImageCarouselProps> = ({
         return () => carouselElement?.removeEventListener('wheel', onScroll)
     }, [images])
 
-    const slideClass = `${width} ${height} ${getFitClass(imageFit)} snap-always snap-start shrink-0 ${customClass}`
+    const slideClass = `${width} ${height} ${getFitClass(imageFitType)} snap-always snap-start shrink-0 ${customClass}`
 
     return <div
         ref={carouselRef}
