@@ -6,7 +6,9 @@ import AppConfig from './config/app'
 import InfiniteCarousel from './components/InfiniteCarousel'
 
 function App() {
-    const { images, isLoading } = useImages(AppConfig.IMAGES_API_ENDPOINT as string);
+    const { images: carouselImages, isLoading } = useImages(AppConfig.IMAGES_API_ENDPOINT as string);
+
+    const images =  carouselImages.map(image => image.url)
 
     if(isLoading) {
         return (
@@ -23,9 +25,9 @@ function App() {
 
     return (
         <div className="App bg-gray-800 h-screen w-full">
-            <header className="App-header w-full">
+            <header className="bg-gray-800 w-full">
                 <img src={logo} className="w-24 aspect-square animate-spin" alt="logo"/>
-                <InfiniteCarousel images={images}/>
+                <InfiniteCarousel images={images} height='h-96' imageFit='COVER'/>
             </header>
         </div>
     )

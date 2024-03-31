@@ -1,4 +1,4 @@
 export interface CarouselImage {
-    id: string;
+    id: number;
     url: string;
 }
