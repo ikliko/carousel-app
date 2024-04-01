@@ -178,7 +178,6 @@ const InfiniteCarousel: React.FC<ImageCarouselProps> = ({
             <InfiniteCarouselImage
                 key={`img-${293478 + 1}`}
                 onLoad={() => {
-                    console.log(12321)
                     requestAnimationFrame(startRender)
                 }}
                 image={{url: images[images.length - 1], id: 1298324}}
